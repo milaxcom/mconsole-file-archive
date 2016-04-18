@@ -1,6 +1,6 @@
 <?php
 
-namespace Milax\Mconsole\Mconsole\Files;
+namespace Milax\Mconsole\Files;
 
 use Milax\Mconsole\Contracts\ModuleInstaller;
 

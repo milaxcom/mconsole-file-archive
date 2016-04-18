@@ -1,6 +1,6 @@
 <?php
 
-namespace Milax\Mconsole\Mconsole\Files\Http\Controllers;
+namespace Milax\Mconsole\Files\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +11,6 @@ use App\Http\Requests;
  */
 class FilesController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -87,5 +86,4 @@ class FilesController extends Controller
     {
         //
     }
-    
 }
