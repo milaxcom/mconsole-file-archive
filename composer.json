@@ -1,0 +1,21 @@
+{
+    "name": "milax/mconsole-files",
+    "description": "",
+    "authors": [
+        {
+            "name": "Eugene Min",
+            "email": "e.min@milax.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.2.*",
+        "laravelcollective/html": "5.2.*",
+    },
+    "autoload": {
+        "psr-4": {
+            "Milax\\Mconsole\\Files\\": "src/Milax/Mconsole/Files/"
+        }
+    },
+    "minimum-stability": "stable"
+}
