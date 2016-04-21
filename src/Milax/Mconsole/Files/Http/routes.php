@@ -6,9 +6,9 @@
 Route::group([
     'prefix' => 'mconsole',
     'middleware' => ['web', 'mconsole'],
-    'namespace' => 'App\Mconsole\Files\Http\Controllers',
+    'namespace' => 'Milax\Mconsole\Files\Http\Controllers',
 ], function () {
     
-    //
+    Route::resource('files', 'FilesController');
 
 });
