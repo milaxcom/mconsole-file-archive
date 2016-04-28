@@ -1,6 +1,6 @@
 <?php
 
-namespace Milax\Mconsole\Files\Models;
+namespace Milax\Mconsole\FileArchive\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

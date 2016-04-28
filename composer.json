@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Milax\\Mconsole\\Files\\": "src/Milax/Mconsole/Files/"
+            "Milax\\Mconsole\\FileArchive\\": "src/Milax/Mconsole/FileArchive/"
         }
     },
     "minimum-stability": "stable"

@@ -1,6 +1,6 @@
 <?php
 
-namespace Milax\Mconsole\Files\Http\Controllers;
+namespace Milax\Mconsole\FileArchive\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-use Milax\Mconsole\Files\Installer;
+use Milax\Mconsole\FileArchive\Installer;
 
 /**
  * Files module bootstrap file
@@ -12,7 +12,7 @@ return [
     'register' => [
         'middleware' => [],
         'providers' => [
-            \Milax\Mconsole\Files\Provider::class,
+            \Milax\Mconsole\FileArchive\Provider::class,
         ],
         'aliases' => [],
         'bindings' => [],

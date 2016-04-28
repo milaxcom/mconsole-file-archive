@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFileArchivesTable extends Migration
+class CreateFileArchiveTable extends Migration
 {
     /**
      * Run the migrations.
