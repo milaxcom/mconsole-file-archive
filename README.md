@@ -1,2 +1,2 @@
 # mconsole-file-archive
-Files module for Mconsole
+File archive module for Mconsole
