@@ -2,7 +2,7 @@
 
 namespace Milax\Mconsole\FileArchive;
 
-use Milax\Mconsole\Contracts\Modules\Installer;
+use Milax\Mconsole\Contracts\Modules\ModuleInstaller;
 
 class Installer implements ModuleInstaller
 {
