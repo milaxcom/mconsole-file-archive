@@ -6,8 +6,8 @@ use Milax\Mconsole\FileArchive\Installer;
  * Files module bootstrap file
  */
 return [
-    'name' => 'Files',
-    'identifier' => 'mconsole-files',
+    'name' => 'File Archive',
+    'identifier' => 'mconsole-file-archive',
     'description' => 'mconsole::files.module.description',
     'register' => [
         'middleware' => [],
