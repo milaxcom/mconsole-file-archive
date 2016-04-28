@@ -1,10 +1,14 @@
 {
-    "name": "milax/mconsole-files",
-    "description": "Files module for Mconsole",
+    "name": "milax/mconsole-file-archive",
+    "description": "File archive module for Mconsole",
     "authors": [
         {
             "name": "Eugene Min",
             "email": "e.min@milax.com"
+        },
+        {
+            "name": "Vladimir Rudenko",
+            "email": "rudenko@milax.ru"
         }
     ],
     "require": {
