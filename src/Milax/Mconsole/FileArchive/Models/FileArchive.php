@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FileArchive extends Model
 {
-    use \Cacheable, \HasUploads;
+    use \CascadeDelete, \HasState, \HasUploads;
     
-    protected $fillable = ['name', 'path'];
+    protected $fillable = ['title', 'slug', 'description'];
 }

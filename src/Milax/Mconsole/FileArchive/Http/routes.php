@@ -9,6 +9,6 @@ Route::group([
     'namespace' => 'Milax\Mconsole\FileArchive\Http\Controllers',
 ], function () {
     
-    Route::resource('files', 'FilesController');
+    Route::resource('filearchives', 'FileArchivesController');
 
 });
