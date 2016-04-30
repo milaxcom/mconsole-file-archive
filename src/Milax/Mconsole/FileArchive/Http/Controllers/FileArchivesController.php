@@ -39,8 +39,8 @@ class FileArchivesController extends Controller
      */
     public function index()
     {
-        $this->list->setText(trans('mconsole::filearchives.form.name'), 'name')
-            ->setText(trans('mconsole::filearchives.form.slug]'), 'slug')
+        $this->list->setText(trans('mconsole::filearchives.form.title'), 'title')
+            ->setText(trans('mconsole::filearchives.form.slug'), 'slug')
             ->setSelect(trans('mconsole::settings.options.enabled'), 'enabled', [
                 '1' => trans('mconsole::settings.options.on'),
                 '0' => trans('mconsole::settings.options.off'),
