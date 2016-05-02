@@ -25,7 +25,7 @@ return [
         Installer::uninstall();
     },
     'init' => function () {
-        app('API')->menu->push('tools', 'filearchives_all', [
+        app('API')->menu->push([
             'name' => 'All file archives',
             'translation' => 'filearchives.menu.list.name',
             'url' => 'filearchives',
@@ -33,8 +33,8 @@ return [
             'route' => 'mconsole.filearchives.index',
             'visible' => true,
             'enabled' => true,
-        ]);
-        app('API')->menu->push('tools', 'filearchives_form', [
+        ], 'filearchives_all', 'tools');
+        app('API')->menu->push([
             'name' => 'Create file archive',
             'translation' => 'filearchives.menu.create.name',
             'url' => 'filearchives/create',
@@ -42,22 +42,22 @@ return [
             'route' => 'mconsole.filearchives.create',
             'visible' => false,
             'enabled' => true,
-        ]);
-        app('API')->menu->push('tools', 'filearchives_update', [
+        ], 'filearchives_form', 'tools');
+        app('API')->menu->push([
             'name' => 'Edit file archives',
             'translation' => 'filearchives.menu.update.name',
             'description' => 'filearchives.menu.update.description',
             'route' => 'mconsole.filearchives.edit',
             'visible' => false,
             'enabled' => true,
-        ]);
-        app('API')->menu->push('tools', 'filearchives_delete', [
+        ], 'filearchives_update', 'tools');
+        app('API')->menu->push([
             'name' => 'Delete file archives',
             'translation' => 'filearchives.menu.delete.name',
             'description' => 'filearchives.menu.delete.description',
             'route' => 'mconsole.filearchives.destroy',
             'visible' => false,
             'enabled' => true,
-        ]);
+        ], 'filearchives_delete', 'tools');
     },
 ];
