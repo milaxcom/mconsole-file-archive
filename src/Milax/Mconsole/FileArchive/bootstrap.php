@@ -26,38 +26,21 @@ return [
     },
     'init' => function () {
         app('API')->menu->push([
-            'name' => 'All file archives',
+            'name' => 'File archives',
             'translation' => 'filearchives.menu.list.name',
             'url' => 'filearchives',
-            'description' => 'filearchives.menu.list.description',
-            'route' => 'mconsole.filearchives.index',
             'visible' => true,
             'enabled' => true,
-        ], 'filearchives_all', 'tools');
-        app('API')->menu->push([
-            'name' => 'Create file archive',
-            'translation' => 'filearchives.menu.create.name',
-            'url' => 'filearchives/create',
-            'description' => 'filearchives.menu.create.description',
-            'route' => 'mconsole.filearchives.create',
-            'visible' => false,
-            'enabled' => true,
-        ], 'filearchives_form', 'tools');
-        app('API')->menu->push([
-            'name' => 'Edit file archives',
-            'translation' => 'filearchives.menu.update.name',
-            'description' => 'filearchives.menu.update.description',
-            'route' => 'mconsole.filearchives.edit',
-            'visible' => false,
-            'enabled' => true,
-        ], 'filearchives_update', 'tools');
-        app('API')->menu->push([
-            'name' => 'Delete file archives',
-            'translation' => 'filearchives.menu.delete.name',
-            'description' => 'filearchives.menu.delete.description',
-            'route' => 'mconsole.filearchives.destroy',
-            'visible' => false,
-            'enabled' => true,
-        ], 'filearchives_delete', 'tools');
+        ], 'filearchives', 'tools');
+        
+        app('API')->acl->register([
+            ['GET', 'filearchives', 'filearchives.acl.index', 'filearchives'],
+            ['GET', 'filearchives/create', 'filearchives.acl.create'],
+            ['POST', 'filearchives', 'filearchives.acl.store'],
+            ['GET', 'filearchives/{filearchives}/edit', 'filearchives.acl.edit'],
+            ['PUT', 'filearchives/{filearchives}', 'filearchives.acl.update'],
+            ['GET', 'filearchives/{filearchives}', 'filearchives.acl.show'],
+            ['DELETE', 'filearchives/{filearchives}', 'filearchives.acl.destroy'],
+        ]);
     },
 ];
