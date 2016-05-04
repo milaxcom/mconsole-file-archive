@@ -8,7 +8,7 @@ use Milax\Mconsole\FileArchive\Installer;
 return [
     'name' => 'File Archive',
     'identifier' => 'mconsole-file-archive',
-    'description' => 'mconsole::filearchives.module.description',
+    'description' => 'mconsole::filearchives.module',
     'register' => [
         'middleware' => [],
         'providers' => [
@@ -27,7 +27,7 @@ return [
     'init' => function () {
         app('API')->menu->push([
             'name' => 'File archives',
-            'translation' => 'filearchives.menu.list.name',
+            'translation' => 'filearchives.menu',
             'url' => 'filearchives',
             'visible' => true,
             'enabled' => true,
