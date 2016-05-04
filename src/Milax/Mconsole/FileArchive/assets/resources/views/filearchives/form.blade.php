@@ -47,8 +47,7 @@
                     'type' => MX_UPLOAD_TYPE_DOCUMENT,
                     'multiple' => true,
                     'group' => 'archive',
-                    'preset' => 'pages',
-                    'selector' => app('API')->options->getByKey('filearchives_show_presets'),
+                    'selector' => true,
                     'id' => isset($item) ? $item->id : null,
                     'model' => 'Milax\Mconsole\FileArchive\Models\FileArchive',
                 ])
