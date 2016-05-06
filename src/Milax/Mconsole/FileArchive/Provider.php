@@ -23,10 +23,12 @@ class Provider extends ServiceProvider
      */
     public function register()
     {
+        app('API')->repositories->register('filearchives', new \Milax\Mconsole\FileArchive\FileArchiveRepository(\Milax\Mconsole\FileArchive\Models\FileArchive::class));
+        
         $this->app->when('\Milax\Mconsole\FileArchive\Http\Controllers\FileArchivesController')
             ->needs('\Milax\Mconsole\Contracts\Repository')
             ->give(function () {
-                return new \Milax\Mconsole\FileArchive\FileArchiveRepository(\Milax\Mconsole\FileArchive\Models\FileArchive::class);
+                return app('API')->repositories->filearchives;
             });
     }
 }
