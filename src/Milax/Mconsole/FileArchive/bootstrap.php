@@ -26,8 +26,7 @@ return [
     },
     'init' => function () {
         app('API')->menu->push([
-            'name' => 'File archives',
-            'translation' => 'filearchives.menu',
+            'name' => 'filearchives.menu',
             'url' => 'filearchives',
             'visible' => true,
             'enabled' => true,
