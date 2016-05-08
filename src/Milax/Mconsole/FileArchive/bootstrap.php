@@ -31,7 +31,7 @@ return [
             'url' => 'filearchives',
             'visible' => true,
             'enabled' => true,
-        ], 'filearchives', 'tools');
+        ], 'filearchives', 'tools.files');
         
         app('API')->acl->register([
             ['GET', 'filearchives', 'filearchives.acl.index', 'filearchives'],
