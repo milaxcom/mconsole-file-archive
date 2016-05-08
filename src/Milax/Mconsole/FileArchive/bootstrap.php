@@ -26,7 +26,7 @@ return [
     },
     'init' => function () {
         app('API')->menu->push([
-            'name' => 'filearchives.menu',
+            'name' => 'mconsole::filearchives.menu',
             'url' => 'filearchives',
             'visible' => true,
             'enabled' => true,
