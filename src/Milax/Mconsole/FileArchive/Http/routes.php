@@ -4,7 +4,7 @@
  * Files module routes file
  */
 Route::group([
-    'prefix' => 'mconsole',
+    'prefix' => config('mconsole.url'),
     'middleware' => ['web', 'mconsole'],
     'namespace' => 'Milax\Mconsole\FileArchive\Http\Controllers',
 ], function () {

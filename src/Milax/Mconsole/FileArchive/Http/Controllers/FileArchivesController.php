@@ -19,7 +19,6 @@ class FileArchivesController extends Controller
 {
     use \HasRedirects, \DoesNotHaveShow;
     
-    protected $redirectTo = '/mconsole/filearchives';
     protected $model = '\Milax\Mconsole\FileArchive\Models\FileArchive';
     
     /**
@@ -30,6 +29,7 @@ class FileArchivesController extends Controller
         $this->list = $list;
         $this->form = $form;
         $this->repository = $repository;
+        $this->redirectTo = mconsole_url('filearchives');
     }
     
     /**
