@@ -14,9 +14,9 @@ class CreateFileArchivesTable extends Migration
     {
         Schema::create('file_archives', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('slug');
-            $table->text('description');
+            $table->string('title')->nullable();
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
             $table->boolean('enabled')->default(true);
             $table->timestamps();
         });
