@@ -33,13 +33,13 @@ return [
         ], 'filearchives', 'tools.files');
         
         app('API')->acl->register([
-            ['GET', 'filearchives', 'mconsole::filearchives.acl.index', 'filearchives'],
+            ['GET', 'filearchives', 'mconsole::filearchives.acl.index'],
             ['GET', 'filearchives/create', 'mconsole::filearchives.acl.create'],
             ['POST', 'filearchives', 'mconsole::filearchives.acl.store'],
             ['GET', 'filearchives/{filearchives}/edit', 'mconsole::filearchives.acl.edit'],
             ['PUT', 'filearchives/{filearchives}', 'mconsole::filearchives.acl.update'],
             ['GET', 'filearchives/{filearchives}', 'mconsole::filearchives.acl.show'],
             ['DELETE', 'filearchives/{filearchives}', 'mconsole::filearchives.acl.destroy'],
-        ]);
+        ], 'filearchives');
     },
 ];
