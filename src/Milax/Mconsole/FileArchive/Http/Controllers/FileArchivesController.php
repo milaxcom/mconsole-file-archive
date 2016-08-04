@@ -48,11 +48,11 @@ class FileArchivesController extends Controller
             
         return $this->list->setQuery($this->repository->index())->setAddAction('filearchives/create')->render(function ($item) {
             return [
-                '#' => $item->id,
+                trans('mconsole::tables.state') => view('mconsole::indicators.state', $item),
+                trans('mconsole::tables.id') => $item->id,
                 trans('mconsole::filearchives.table.updated') => $item->updated_at->format('m.d.Y'),
                 trans('mconsole::filearchives.table.slug') => $item->slug,
                 trans('mconsole::filearchives.table.title') => $item->title,
-                trans('mconsole::tables.state.name') => view('mconsole::indicators.state', $item),
             ];
         });
     }
