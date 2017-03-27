@@ -44,7 +44,7 @@
             </div>
             <div class="portlet-body form">
                 @include('mconsole::forms.upload', [
-                    'type' => MX_UPLOAD_TYPE_DOCUMENT,
+                    'type' => MconsoleUploadType::Document,
                     'multiple' => true,
                     'group' => 'archive',
                     'selector' => true,

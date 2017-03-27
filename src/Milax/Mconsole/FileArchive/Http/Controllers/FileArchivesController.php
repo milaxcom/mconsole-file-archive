@@ -81,6 +81,8 @@ class FileArchivesController extends Controller
         $fileArchive = $this->repository->create($request->all());
         
         $this->handleUploads($fileArchive);
+        
+        $this->redirect();
     }
 
     /**
@@ -123,6 +125,8 @@ class FileArchivesController extends Controller
         $this->handleUploads($fileArchive);
         
         $fileArchive->update($request->all());
+        
+        $this->redirect();
     }
 
     /**
@@ -134,6 +138,8 @@ class FileArchivesController extends Controller
     public function destroy($id)
     {
         $this->repository->destroy($id);
+        
+        $this->redirect();
     }
     
     /**

@@ -2,10 +2,10 @@
 
 namespace Milax\Mconsole\FileArchive\Http\Requests;
 
-use App\Http\Requests\Request;
+use Illuminate\Foundation\Http\FormRequest;
 use Milax\Mconsole\FileArchive\Models\FileArchive;
 
-class FileArchiveRequest extends Request
+class FileArchiveRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class FileArchiveRequest extends Request
     {
         $fileArchive = FileArchive::find($this->filearchives);
         
-        switch ($this->method) {
+        switch ($this->method()) {
             case 'PUT':
             case 'UPDATE':
                 return [
